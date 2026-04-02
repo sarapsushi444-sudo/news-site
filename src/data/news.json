@@ -1,29 +1,29 @@
 {
   "philippines": [
     {
+      "title": "NASA is shooting for the moon: A guide to the Artemis II mission",
+      "description": "CAPE CANAVERAL, Florida — It’s humanity’s first flight to the moon since 1972. In a throwback to Apollo, NASA’s Artemis II mission will send four astronauts on a lunar fly-around. They’ll hurtle several thousand miles beyond the moon, hang a U-turn, and then come straight back. No circling around the moon, no stopping for a moonwalk—just a quick out-and-back lasting less than 10 days. NASA promises more boot prints in the gray lunar dust, but not before a couple of practice missions. The upcoming test flight by Artemis astronauts Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen is the […]...\nKeep on reading: NASA is shooting for the moon: A guide to the Artemis II mission",
+      "source": "INQUIRER.net",
+      "url": "https://globalnation.inquirer.net/316735/nasa-is-shooting-for-the-moon-a-guide-to-the-artemis-ii-mission",
+      "publishedAt": "2026-04-02T16:44:23.000Z",
+      "imageUrl": null,
+      "category": "philippines"
+    },
+    {
+      "title": "BI defends move over viral video of passenger blocked to travel",
+      "description": "MANILA, Philippines — The Bureau of Immigration (BI) on Thursday clarified that the viral video of a traveler whose departure was deferred at Ninoy Aquino International Airport (Naia) was due to inconsistencies in their statements. According to the BI in a statement, the female passenger was intercepted on the afternoon of March 30 after an immigration officer who processed her “observed inconsistencies in her statements.” READ: BI intercepts mail-order bride scheme victim at Naia The BI’s Immigration Protection and Border Enforcement Section also identified several red flags during further assessment, particularly her failure to clearly state her travel purpose, the […]...\nKeep on reading: BI defends move over viral video of passenger blocked to travel",
+      "source": "INQUIRER.net",
+      "url": "https://newsinfo.inquirer.net/2206040/bi-defends-move-over-viral-video-of-passenger-blocked-to-travel",
+      "publishedAt": "2026-04-02T15:27:42.000Z",
+      "imageUrl": null,
+      "category": "philippines"
+    },
+    {
       "title": "Indonesia issues new summons for Google, Meta over teen social media ban",
       "description": "JAKARTA, Indonesia — Indonesia issued a second round of summons letters on Thursday to Google and Meta for allegedly flouting a days-old ban on social media access for under-16s. The Communication and Digital Ministry said it had “issued a second summons letter to Google (YouTube) and Meta (Facebook, Instagram, Threads) after both parties failed to comply” and warned of “sanctions”. READ: Indonesia enforces social media ban for children under 16 App-addicted Indonesia began enforcing a social media ban for users under the age of 16 on Saturday, citing threats from online pornography, cyberbullying and internet addiction. The ministry said Thursday […]...\nKeep on reading: Indonesia issues new summons for Google, Meta over teen social media ban",
       "source": "INQUIRER.net",
       "url": "https://globalnation.inquirer.net/316728/indonesia-issues-new-summons-for-google-meta-over-teen-social-media-ban",
       "publishedAt": "2026-04-02T15:06:34.000Z",
-      "imageUrl": null,
-      "category": "philippines"
-    },
-    {
-      "title": "April 2026 K-dramas: From ‘Perfect Crown’ to ‘Yumi’s Cells’ Season 3",
-      "description": "The K-drama lineup for April 2026 is as intense as the heat in the Philippines, covering power struggles within a modern-day royal family, uncovering the mystery behind an illegal boxing syndicate, and navigating the toughest parts of office politics.  This time, it’s IU, Byeon Woo-seok, Kim Go-eun, and Kim Hyang-gi taking center stage. Many fans know what they’re capable of in their past work, and since their latest work shows them as different characters, it’s interesting to see how they’ll pull them off. From dealing with chaebol drama to coming to terms with one’s emotions, here’s a look at the […]...\nKeep on reading: April 2026 K-dramas: From ‘Perfect Crown’ to ‘Yumi’s Cells’ Season 3",
-      "source": "INQUIRER.net",
-      "url": "https://entertainment.inquirer.net/661290/april-2026-k-dramas-from-perfect-crown-to-yumis-cells-season-3",
-      "publishedAt": "2026-04-02T14:42:54.000Z",
-      "imageUrl": null,
-      "category": "philippines"
-    },
-    {
-      "title": "US stocks join global selloff as oil prices jump again",
-      "description": "NEW YORK — Wall Street stocks tumbled early Thursday on the latest jump in oil prices as tough rhetoric between the United States and Iran lessened hopes of a Middle East war resolution. About 30 minutes into trading, the Dow Jones Industrial Average was down 1.0 percent at 46,108.16. The broad-based S&P 500 fell 0.9 percent to 6,516.01, while the tech-rich Nasdaq Composite Index shed 1.3 percent to 21,556.30. US stocks had risen the last two days after Iranian President Masoud Pezeshkian appeared to open the door to a ceasefire, while US President Donald Trump scheduled an address to the […]...\nKeep on reading: US stocks join global selloff as oil prices jump again",
-      "source": "INQUIRER.net",
-      "url": "https://business.inquirer.net/583438/us-stocks-join-global-selloff-as-oil-prices-jump-again",
-      "publishedAt": "2026-04-02T14:38:07.000Z",
       "imageUrl": null,
       "category": "philippines"
     },
@@ -55,7 +55,80 @@
       "category": "philippines"
     }
   ],
-  "energy": [],
+  "energy": [
+    {
+      "title": "Jobless claims fall to lowest level since mid-May",
+      "description": "",
+      "source": "MarketWatch.com - MarketPulse",
+      "url": "https://www.marketwatch.com/story/jobless-claims-fall-to-lowest-level-since-mid-may-bda58e3b?mod=mw_rss_marketpulse",
+      "publishedAt": "2025-07-03T12:36:00.000Z",
+      "imageUrl": null,
+      "category": "energy"
+    },
+    {
+      "title": "Jobless claims stay low in latest week",
+      "description": "",
+      "source": "MarketWatch.com - MarketPulse",
+      "url": "https://www.marketwatch.com/story/jobless-claims-stay-low-in-latest-week-27b4b50b?mod=mw_rss_marketpulse",
+      "publishedAt": "2025-02-13T13:33:00.000Z",
+      "imageUrl": null,
+      "category": "energy"
+    },
+    {
+      "title": "Consumer credit growth soars in December",
+      "description": "",
+      "source": "MarketWatch.com - MarketPulse",
+      "url": "https://www.marketwatch.com/story/consumer-credit-growth-soars-in-december-d405d18e?mod=mw_rss_marketpulse",
+      "publishedAt": "2025-02-07T20:26:00.000Z",
+      "imageUrl": null,
+      "category": "energy"
+    },
+    {
+      "title": "Form 144 TransUnion For: 2 April",
+      "description": "",
+      "source": "All News",
+      "url": "https://www.investing.com/news/filings/form-144-transunion-for-2-april-93CH-4596100",
+      "publishedAt": "2026-04-02T16:39:13.000Z",
+      "imageUrl": "https://i-invdn-com.investing.com/news/World_News_10_M_1440052130.jpg",
+      "category": "energy"
+    },
+    {
+      "title": "European shares trim losses on hopes of reopening of Strait of Hormuz",
+      "description": "",
+      "source": "All News",
+      "url": "https://www.investing.com/news/economy-news/european-shares-seen-lower-at-open-as-hopes-of-end-to-middle-east-conflict-fade-4594687",
+      "publishedAt": "2026-04-02T16:37:33.000Z",
+      "imageUrl": "https://i-invdn-com.investing.com/trkd-images/LYNXMPEM310AG_L.jpg",
+      "category": "energy"
+    },
+    {
+      "title": "FTSE 100 closes higher after Britain’s move to hold talks on Strait of Hormuz",
+      "description": "",
+      "source": "All News",
+      "url": "https://www.investing.com/news/stock-market-news/uk-stocks-fall-as-optimism-over-quick-middle-east-ceasefire-fades-4595157",
+      "publishedAt": "2026-04-02T16:37:14.000Z",
+      "imageUrl": "https://i-invdn-com.investing.com/trkd-images/LYNXMPEM310MO_L.jpg",
+      "category": "energy"
+    },
+    {
+      "title": "Oil prices jump and shares drop after Trump threatens more Iran strikes",
+      "description": "The US president said he'll bring Iran \"back to the Stone Age\" but gave no detail on ending the war.",
+      "source": "BBC News",
+      "url": "https://www.bbc.com/news/articles/ce8lzd4v7zdo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T16:51:50.000Z",
+      "imageUrl": null,
+      "category": "energy"
+    },
+    {
+      "title": "New laws to make it easier to cancel subscriptions and get refunds",
+      "description": "Consumers will be able to cancel unwanted subscriptions 'at the click of a button', the government said.",
+      "source": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cvg0v36ek2go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T09:08:40.000Z",
+      "imageUrl": null,
+      "category": "energy"
+    }
+  ],
   "tech": [
     {
       "title": "Family offices stall deal-making during Iran conflict",
@@ -67,11 +140,11 @@
       "category": "tech"
     },
     {
-      "title": "Tesla reports 358,000 first-quarter vehicle deliveries, down 14% from last quarter",
+      "title": "Tesla's stock drops more than 4% on disappointing deliveries report",
       "description": "Tesla is coming off a year of declining deliveries due in part to increased competition from rivals in China offering lower-cost models.",
       "source": "Tech",
       "url": "https://www.cnbc.com/2026/04/02/tesla-tsla-q1-2026-vehicle-delivery-production.html",
-      "publishedAt": "2026-04-02T14:37:35.000Z",
+      "publishedAt": "2026-04-02T16:49:57.000Z",
       "imageUrl": null,
       "category": "tech"
     },
@@ -83,7 +156,303 @@
       "publishedAt": "2026-04-02T12:30:23.000Z",
       "imageUrl": null,
       "category": "tech"
+    },
+    {
+      "title": "Fewer UK adults posting on social media, Ofcom finds",
+      "description": "Some experts believe it highlights a social media shift as platforms boost short video.",
+      "source": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cgqk718l4neo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T14:38:24.000Z",
+      "imageUrl": null,
+      "category": "tech"
+    },
+    {
+      "title": "Elon Musk's SpaceX set to be worth $1 trillion with planned public listing",
+      "description": "The company’s public stock debut is set to be one of the most valuable in history, and could make Musk the world's first trillionaire.",
+      "source": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c2k35lg92dpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T07:05:05.000Z",
+      "imageUrl": null,
+      "category": "tech"
+    },
+    {
+      "title": "Peppa Pig and Transformers owner Hasbro hit by cyber-attack",
+      "description": "The firm says its operations remain open but says the hack \"may result in some delays\".",
+      "source": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cx24e1nryn9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-01T16:05:37.000Z",
+      "imageUrl": null,
+      "category": "tech"
+    },
+    {
+      "title": "Anthropic Says That Claude Contains Its Own Kind of Emotions",
+      "description": "Researchers at the company found representations inside of Claude that perform functions similar to human feelings.",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/anthropic-claude-research-functional-emotions/",
+      "publishedAt": "2026-04-02T16:00:00.000Z",
+      "imageUrl": null,
+      "category": "tech"
+    },
+    {
+      "title": "Even Artemis II Astronauts Have Microsoft Outlook Problems",
+      "description": "The mission commander’s email inbox failed during the journey to the moon. Have they tried turning the computer off and back on again?",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/artemis-ii-microsoft-outlook-problems/",
+      "publishedAt": "2026-04-02T15:59:36.000Z",
+      "imageUrl": null,
+      "category": "tech"
     }
   ],
-  "lastUpdated": "2026-04-02T15:13:59.196Z"
+  "gaming": [
+    {
+      "title": "Overwatch's 2026 April Fools' hero changes are so good they should be permanent",
+      "description": "Overwatch's April Fools' 2026 mode tweaks every hero's kit in ridiculous ways, but some of them are pretty practical, too",
+      "source": " Polygon.com ",
+      "url": "https://www.polygon.com/overwatch-april-fools-2026-hero-changes/",
+      "publishedAt": "2026-04-02T16:45:21.000Z",
+      "imageUrl": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/04/overwatch-april-fools-2026.jpg",
+      "category": "gaming"
+    },
+    {
+      "title": "How to ride on a player's shoulders in Fortnite",
+      "description": "Shoulder riding is a special social interaction in Fortnite Chapter 7 Season 2 that leads to huge towers of players.",
+      "source": " Polygon.com ",
+      "url": "https://www.polygon.com/fortnite-chapter-7-season-2-c7s2-shoulder-ride-how-to/",
+      "publishedAt": "2026-04-02T16:34:28.000Z",
+      "imageUrl": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/04/hatsune-miku-and-2d-gorillaz_fn.jpg",
+      "category": "gaming"
+    },
+    {
+      "title": "Steam game loses multiplayer after AI company abandons servers",
+      "description": "The F2P game by ex-Blizzard developers shows that the AI boom has found yet another way to impact video games negatively",
+      "source": " Polygon.com ",
+      "url": "https://www.polygon.com/steam-stormgate-rts-multiplayer-ai-servers-starcraft-blizzard/",
+      "publishedAt": "2026-04-02T15:42:52.000Z",
+      "imageUrl": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/04/stormgate.jpg",
+      "category": "gaming"
+    },
+    {
+      "title": "Raven Software Cofounder Retires After 36 Years, Reminding People Of All The Cool Stuff It Used To Make Before Call Of Duty",
+      "description": "Brian Raffel directed the studio's first game, Black Crypt",
+      "source": "Kotaku",
+      "url": "https://kotaku.com/raven-software-brian-raffel-hexen-call-duty-2000684262",
+      "publishedAt": "2026-04-02T16:54:02.000Z",
+      "imageUrl": "https://kotaku.com/app/uploads/2026/04/ravens-1280x739.jpg",
+      "category": "gaming"
+    },
+    {
+      "title": "Breaking Down The 12 Biggest Super Mario Galaxy Movie Cameos And References",
+      "description": "The movie is chock full of references to the games, and here’s where they originate from",
+      "source": "Kotaku",
+      "url": "https://kotaku.com/super-mario-galaxy-movie-cameos-game-watch-daisy-pikmin-2000684272",
+      "publishedAt": "2026-04-02T16:43:59.000Z",
+      "imageUrl": "https://kotaku.com/app/uploads/2026/04/Screenshot-2026-04-02-093558-e1775137357717-1280x719.jpg",
+      "category": "gaming"
+    },
+    {
+      "title": "Seller Who Stockpiled Memory Now Panicking After RAM Prices Dip: ‘We’re Doomed, We’re Screwed’",
+      "description": "The worried vendor also asked if prices might go 'back up' in the future",
+      "source": "Kotaku",
+      "url": "https://kotaku.com/memory-ram-ai-dram-prices-stock-drop-dip-panic-2000684261",
+      "publishedAt": "2026-04-02T16:33:13.000Z",
+      "imageUrl": "https://kotaku.com/app/uploads/2026/04/memoryram-vendor-1280x720.jpg",
+      "category": "gaming"
+    },
+    {
+      "title": "Remember the Switch 2's Mysterious C Button? Nintendo is Trying to Tempt You With Platinum Points and User Icons Just to Press It, Now GameChat is a Premium Feature",
+      "description": "Nintendo seems keen for you to remember that the Switch 2's C Button exists, now GameChat is a premium feature.",
+      "source": "IGN Articles",
+      "url": "https://www.ign.com/articles/remember-the-switch-2s-mysterious-c-button-nintendo-is-trying-to-tempt-you-with-platinum-points-and-user-icons-just-to-press-it-now-gamechat-is-a-premium-feature",
+      "publishedAt": "2026-04-02T16:45:31.000Z",
+      "imageUrl": null,
+      "category": "gaming"
+    },
+    {
+      "title": "This TSA-Compliant 28,000mAh 100W LiFePO4 Power Station Drops to Just $45.59",
+      "description": "This is the smallest power station I've seen, weighing in at under 3 pounds.",
+      "source": "IGN Articles",
+      "url": "https://www.ign.com/articles/daran-28000mah-100w-lifepo4-power-station-deal",
+      "publishedAt": "2026-04-02T16:45:00.000Z",
+      "imageUrl": null,
+      "category": "gaming"
+    }
+  ],
+  "world": [
+    {
+      "title": "Man dies in storm as Saharan dust shrouds Crete",
+      "description": "A man dies in flooding near Athens as rain lashes several regions in Greece, while a Saharan dust storm enveloped Crete.",
+      "source": "BBC News",
+      "url": "https://www.bbc.com/news/articles/c070d9g5k7jo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T07:54:44.000Z",
+      "imageUrl": null,
+      "category": "world"
+    },
+    {
+      "title": "'Be serious... don't speak every day': Macron criticises Trump approach to Iran war",
+      "description": "The comments were an apparent jab at the US leader's sometimes contradictory stance on the US-Israeli war against Iran.",
+      "source": "BBC News",
+      "url": "https://www.bbc.com/news/articles/cevk0e4ykwko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T13:41:27.000Z",
+      "imageUrl": null,
+      "category": "world"
+    },
+    {
+      "title": "Brazil grants joint custody over pets in new law for separated couples",
+      "description": "Lawmakers in the Brazilian Congress view the law change as a reflection of pets' importance for their owners.",
+      "source": "BBC News",
+      "url": "https://www.bbc.com/news/articles/ce8jzn180x2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T09:38:08.000Z",
+      "imageUrl": null,
+      "category": "world"
+    }
+  ],
+  "sports": [
+    {
+      "title": "Three-round NFL mock draft: Kiper, Miller, Reid and Yates rotate through the top 100 picks",
+      "description": "We asked four draft analysts -- Mel Kiper Jr., Matt Miller, Jordan Reid and Field Yates -- to make picks in the first three rounds. Where do the top prospects land?",
+      "source": "www.espn.com - TOP",
+      "url": "https://www.espn.com/nfl/draft2026/story/_/id/48357214/2026-nfl-mock-draft-three-rounds-kiper-miller-reid-yates-predictions",
+      "publishedAt": "2026-04-02T13:18:22.000Z",
+      "imageUrl": null,
+      "category": "sports"
+    },
+    {
+      "title": "These flaws could hold back the draft's top QBs",
+      "description": "We saw a lot during the college careers of the draft's top QBs. Each has something that could set them back.",
+      "source": "www.espn.com - TOP",
+      "url": "https://www.espn.com/nfl/draft2026/story/_/id/48369237/nfl-draft-2026-flaws-top-quarterbacks-fernando-mendoza-ty-simpson",
+      "publishedAt": "2026-04-02T13:18:22.000Z",
+      "imageUrl": null,
+      "category": "sports"
+    },
+    {
+      "title": "Tiger surprised over DUI arrest, bodycam shows",
+      "description": "Tiger Woods expressed astonishment as he was handcuffed after crashing his vehicle last week in Florida, according to body camera footage released Thursday.",
+      "source": "www.espn.com - TOP",
+      "url": "https://www.espn.com/golf/story/_/id/48378214/bodycam-shows-tiger-woods-surprised-dui-arrest",
+      "publishedAt": "2026-04-02T17:52:03.000Z",
+      "imageUrl": null,
+      "category": "sports"
+    },
+    {
+      "title": "The $11k World Cup final ticket - what we learned from first open sale",
+      "description": "The first open sale of tickets for the 2026 World Cup showed Fifa is charging up to  $10,990 (£8,333) to be at the final.",
+      "source": "BBC Sport",
+      "url": "https://www.bbc.com/sport/football/articles/ce8lzj0rprpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T13:10:43.000Z",
+      "imageUrl": null,
+      "category": "sports"
+    },
+    {
+      "title": "Alpine condemn Colapinto abuse and deny 'sabotage'",
+      "description": "Alpine condemn the social media abuse targeted at Franco Colapinto and deny the \"unfounded\" suggestions they are favouring team-mate Pierre Gasly.",
+      "source": "BBC Sport",
+      "url": "https://www.bbc.com/sport/formula1/articles/cx24vjd290no?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T12:40:26.000Z",
+      "imageUrl": null,
+      "category": "sports"
+    },
+    {
+      "title": "Italian FA head and Buffon quit over World Cup failure",
+      "description": "Gabriele Gravina resigns as head of Italy's football federation after they fail to qualify for a third World Cup in a row, while ex-goalkeeper Gianluigi Buffon quits his role with the national team.",
+      "source": "BBC Sport",
+      "url": "https://www.bbc.com/sport/football/articles/ckgr620w5eyo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-04-02T15:44:34.000Z",
+      "imageUrl": null,
+      "category": "sports"
+    },
+    {
+      "title": "Home Page Featured",
+      "description": "",
+      "source": "Sportsnet.ca",
+      "url": " https://www.sportsnet.ca/?sn-collection=top-collection-july-2 ",
+      "publishedAt": "2025-07-02T14:34:53.000Z",
+      "imageUrl": null,
+      "category": "sports"
+    },
+    {
+      "title": "NHL Power Rankings: Best bang for the buck on all 32 teams",
+      "description": "We’re devoting this week’s edition of the Power Rankings to identifying a contract or two for all 32 squads that represents tremendous value for the club.",
+      "source": "Sportsnet.ca",
+      "url": " https://www.sportsnet.ca/nhl/article/nhl-power-rankings-best-bang-for-the-buck-on-all-32-teams/ ",
+      "publishedAt": "2026-04-02T16:29:25.000Z",
+      "imageUrl": null,
+      "category": "sports"
+    }
+  ],
+  "entertainment": [
+    {
+      "title": "Netflix Orders Limited Series ‘The Corrections’ Starring Meryl Streep",
+      "description": "Netflix has ordered up the limited series “The Corrections” starring Meryl Streep, Variety has confirmed. The show, based on the Jonathan Franzen novel of the same name, was first reported to be on the market in late 2024. Franzen will adapt his novel for the screen and executive produce, with Streep executive producing in addition […]",
+      "source": "Variety",
+      "url": "https://variety.com/2026/tv/news/netflix-orders-meryl-streep-the-corrections-1236705568/",
+      "publishedAt": "2026-04-02T16:35:46.000Z",
+      "imageUrl": null,
+      "category": "entertainment"
+    },
+    {
+      "title": "WME Takes Sales on Yana Alliata’s SXSW Drama ‘Reeling,’ Executive Produced by Werner Herzog — Watch Trailer (EXCLUSIVE)",
+      "description": "The William Morris Endeavor Agency has taken world sales on “Reeling,” a first feature from Italian-American Yana Alliata. The film is executive produced by Werner Herzog and premiered in March at the SXSW Film Festival. “Reeling,” which bowed in the narrative feature competition at SXSW, takes place during a birthday luau weekend on the Hawaiian […]",
+      "source": "Variety",
+      "url": "https://variety.com/2026/film/global/wme-sales-yana-alliata-sxsw-drama-reeling-1236705150/",
+      "publishedAt": "2026-04-02T16:30:00.000Z",
+      "imageUrl": null,
+      "category": "entertainment"
+    },
+    {
+      "title": "Sam Altman Felt ‘Terrible’ Telling Disney CEO Josh D’Amaro About OpenAI’s Decision to Kill Off Sora, Says Companies Still Looking to Collaborate",
+      "description": "Last week, OpenAI CEO Sam Altman broke the news to newly installed Disney CEO Josh D’Amaro that the AI giant was killing off the Sora video-gen platform — before Disney was able to launch its characters in the system. Altman felt “terrible” about it, but added that Disney and OpenAI are still looking to work […]",
+      "source": "Variety",
+      "url": "https://variety.com/2026/digital/news/why-openai-shut-down-sora-sam-altman-felt-terrible-disney-ceo-josh-damaro-1236705497/",
+      "publishedAt": "2026-04-02T16:25:38.000Z",
+      "imageUrl": null,
+      "category": "entertainment"
+    },
+    {
+      "title": "Crunchyroll Anime Awards Nominations: Box Office Smashes ‘Demon Slayer’ & ‘Chainsaw Man’ Up For Film Of The Year",
+      "description": "Crunchyroll is out with the nominations for its 10th annual Anime Awards. See the full list below. The Film of the Year category features 2025 anime smashes Chainsaw Man – The Movie: Reze Arc and Demon Slayer: Kimetsu no Yaiba Infinity Castle going up against 100 Meters, Mononoke the Movie: Chapter II — The Ashes […]",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/anime-awards-nominations-2026-crunchyroll-1236770375/",
+      "publishedAt": "2026-04-02T16:42:19.000Z",
+      "imageUrl": null,
+      "category": "entertainment"
+    },
+    {
+      "title": "Netflix Nabs ‘The Corrections’ Starring Meryl Streep With Series Order As Part Of Prestige Ramp-Up; Cord Jefferson Helms Par TV Studios Limited Drama",
+      "description": "EXCLUSIVE: Another high-profile TV package has been won by Netflix in a competitive situation. The streamer has landed The Corrections, based on Jonathan Franzen’s bestselling 2001 novel, with three-time Oscar winner Meryl Streep attached to star. Franzen is adapting his book, and Oscar winner Cord Jefferson (American Fiction, Watchmen) is directing all episodes of the […]",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/the-corrections-meryl-streep-netflix-series-cord-jefferson-1236767009/",
+      "publishedAt": "2026-04-02T16:30:00.000Z",
+      "imageUrl": null,
+      "category": "entertainment"
+    },
+    {
+      "title": "Alyssa Farah Griffin Sets ‘The View’ Return Date",
+      "description": "Alyssa Farah Griffin will return to ABC’s The View Monday, April 13, after nearly two months of maternity leave. Whoopi Goldberg, the talk show’s moderator, announced the return of her cohost at the end of today’s episode, saying Griffin would return after the holiday. The talk show is in reruns the week of April 6. […]",
+      "source": "Deadline",
+      "url": "https://deadline.com/2026/04/alyssa-farah-griffin-the-view-return-date-1236771836/",
+      "publishedAt": "2026-04-02T16:20:33.000Z",
+      "imageUrl": null,
+      "category": "entertainment"
+    },
+    {
+      "title": "‘The Corrections’ Series Starring Meryl Streep Lands at Netflix",
+      "description": "Cord Jefferson will direct the limited series based on Jonathan Franzen’s novel, which has been in development at Paramount since 2024.",
+      "source": "The Hollywood Reporter",
+      "url": "https://www.hollywoodreporter.com/tv/tv-news/the-corrections-series-meryl-streep-netflix-1236554544/",
+      "publishedAt": "2026-04-02T16:52:15.000Z",
+      "imageUrl": null,
+      "category": "entertainment"
+    },
+    {
+      "title": "‘The Testaments’ Review: Chase Infiniti in Hulu’s Creatively Suffocated ‘Handmaid’s Tale’ Sequel",
+      "description": "The 'One Battle After Another' star anchors this loose adaptation of Margaret Atwood's novel, returning viewers to Gilead less than a year after the original series ended.",
+      "source": "The Hollywood Reporter",
+      "url": "https://www.hollywoodreporter.com/tv/tv-reviews/the-testaments-review-chase-infiniti-hulu-handmaids-sequel-1236552871/",
+      "publishedAt": "2026-04-02T16:00:00.000Z",
+      "imageUrl": null,
+      "category": "entertainment"
+    }
+  ],
+  "lastUpdated": "2026-04-02T16:54:20.485Z"
 }
