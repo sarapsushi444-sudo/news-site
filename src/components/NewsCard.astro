@@ -1,0 +1,74 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  source: string;
+  publishedAt: string;
+  url: string;
+  imageUrl?: string;
+}
+
+const { title, description, source, publishedAt, url, imageUrl } = Astro.props;
+
+const formattedDate = new Date(publishedAt).toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit'
+});
+---
+
+<article class="group bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300">
+  {imageUrl && (
+    <div class="relative h-48 overflow-hidden">
+      <img 
+        src={imageUrl} 
+        alt={title}
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        onerror="this.style.display='none'"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <span class="absolute bottom-3 left-3 px-2 py-1 text-xs font-medium bg-white/90 dark:bg-slate-900/90 rounded-md text-slate-700 dark:text-slate-300 backdrop-blur-sm">
+        {source}
+      </span>
+    </div>
+  )}
+  
+  <div class="p-5">
+    <div class="flex items-center gap-2 mb-3">
+      {!imageUrl && (
+        <span class="px-2 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-800 rounded-md text-slate-600 dark:text-slate-400">
+          {source}
+        </span>
+      )}
+      <span class="text-xs text-slate-500 dark:text-slate-500 flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        {formattedDate}
+      </span>
+    </div>
+    
+    <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+      {title}
+    </h3>
+    
+    {description && (
+      <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4">
+        {description}
+      </p>
+    )}
+    
+    <a 
+      href={url} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+    >
+      Read full story
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </a>
+  </div>
+</article>

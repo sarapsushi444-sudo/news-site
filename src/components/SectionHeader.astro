@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  icon?: string;
+  color?: string;
+}
+
+const { title, subtitle, icon, color = 'blue' } = Astro.props;
+
+const colorClasses: Record<string, string> = {
+  blue: 'from-blue-500 to-blue-600',
+  green: 'from-emerald-500 to-emerald-600',
+  purple: 'from-purple-500 to-purple-600',
+  orange: 'from-orange-500 to-orange-600',
+  red: 'from-red-500 to-red-600',
+};
+
+const bgClasses: Record<string, string> = {
+  blue: 'bg-blue-50 dark:bg-blue-900/20',
+  green: 'bg-emerald-50 dark:bg-emerald-900/20',
+  purple: 'bg-purple-50 dark:bg-purple-900/20',
+  orange: 'bg-orange-50 dark:bg-orange-900/20',
+  red: 'bg-red-50 dark:bg-red-900/20',
+};
+---
+
+<div class={`rounded-2xl p-6 mb-8 ${bgClasses[color]}`}>
+  <div class="flex items-center gap-4">
+    {icon && (
+      <div class={`w-14 h-14 rounded-xl bg-gradient-to-br ${colorClasses[color]} flex items-center justify-center shadow-lg`}>
+        <Fragment set:html={icon} />
+      </div>
+    )}
+    <div>
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
+        {title}
+      </h2>
+      {subtitle && (
+        <p class="mt-1 text-slate-600 dark:text-slate-400">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  </div>
+</div>

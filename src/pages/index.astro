@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NewsCard from '../components/NewsCard.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+// Import news data
+import newsData from '../data/news.json';
+
+const philippinesIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+</svg>`;
+
+const energyIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+</svg>`;
+
+const techIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>`;
+---
+
+<Layout title="Daily News Digest - Philippines, Energy, Tech Stocks">
+  <!-- Philippines Section -->
+  <section class="mb-12">
+    <SectionHeader
+      title="🇵🇭 Philippines Pulse"
+      subtitle="BGC, Makati & Metro Manila trends, local news and updates"
+      icon={philippinesIcon}
+      color="blue"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {newsData.philippines && newsData.philippines.length > 0 ? (
+        newsData.philippines.slice(0, 8).map((article) => (
+          <NewsCard
+            title={article.title}
+            description={article.description}
+            source={article.source}
+            publishedAt={article.publishedAt}
+            url={article.url}
+            imageUrl={article.imageUrl}
+          />
+        ))
+      ) : (
+        <div class="col-span-full text-center py-12">
+          <p class="text-slate-500 dark:text-slate-400">No articles available. Check back later!</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Energy Section -->
+  <section class="mb-12">
+    <SectionHeader
+      title="⚡ Energy & Geopolitics"
+      subtitle="Oil, gas, energy sector and global geopolitical developments"
+      icon={energyIcon}
+      color="orange"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {newsData.energy && newsData.energy.length > 0 ? (
+        newsData.energy.slice(0, 8).map((article) => (
+          <NewsCard
+            title={article.title}
+            description={article.description}
+            source={article.source}
+            publishedAt={article.publishedAt}
+            url={article.url}
+            imageUrl={article.imageUrl}
+          />
+        ))
+      ) : (
+        <div class="col-span-full text-center py-12">
+          <p class="text-slate-500 dark:text-slate-400">No articles available. Check back later!</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Tech Stocks Section -->
+  <section class="mb-12">
+    <SectionHeader
+      title="📈 US Tech & Markets"
+      subtitle="AI stocks, semiconductors, memory, photonics and financial news"
+      icon={techIcon}
+      color="purple"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {newsData.tech && newsData.tech.length > 0 ? (
+        newsData.tech.slice(0, 8).map((article) => (
+          <NewsCard
+            title={article.title}
+            description={article.description}
+            source={article.source}
+            publishedAt={article.publishedAt}
+            url={article.url}
+            imageUrl={article.imageUrl}
+          />
+        ))
+      ) : (
+        <div class="col-span-full text-center py-12">
+          <p class="text-slate-500 dark:text-slate-400">No articles available. Check back later!</p>
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>
