@@ -21,37 +21,31 @@ const parser = new Parser({
   }
 });
 
-// RSS Feed Sources - Expanded with more reliable sources
 const RSS_SOURCES = {
   philippines: [
     'https://www.inquirer.net/fullfeed',
     'https://www.rappler.com/rss/',
     'https://mb.com.ph/feed/',
   ],
-  energy: [
-    'https://www.marketwatch.com/rss/marketpulse',
-    'https://www.investing.com/rss/news.rss',
-    'https://feeds.bbci.co.uk/news/business/rss.xml',
-  ],
-  tech: [
-    'https://www.cnbc.com/id/19854910/device/rss/rss.html',
-    'https://feeds.bbci.co.uk/news/technology/rss.xml',
-    'https://www.wired.com/feed/rss',
-  ],
-  gaming: [
-    'https://www.polygon.com/rss/index.xml',
-    'https://kotaku.com/rss',
-    'https://www.ign.com/rss/articles/feed',
-  ],
   world: [
     'https://feeds.bbci.co.uk/news/world/rss.xml',
     'https://rss.cnn.com/rss/edition_world.rss',
     'https://feeds.reuters.com/reuters/worldnews',
   ],
-  sports: [
-    'https://www.espn.com/espn/rss/news',
-    'https://feeds.bbci.co.uk/sport/rss.xml',
-    'https://www.sportsnet.ca/feed/',
+  energy: [
+    'https://www.marketwatch.com/rss/marketpulse',
+    'https://www.investing.com/rss/news.rss',
+    'https://feeds.bbci.co.uk/news/business/rss.xml',
+  ],
+  usStocks: [
+    'https://www.cnbc.com/id/100003114/device/rss/rss.html',
+    'https://feeds.bbci.co.uk/news/business/rss.xml',
+    'https://www.marketwatch.com/rss/marketpulse',
+  ],
+  tech: [
+    'https://www.cnbc.com/id/19854910/device/rss/rss.html',
+    'https://feeds.bbci.co.uk/news/technology/rss.xml',
+    'https://www.wired.com/feed/rss',
   ],
   entertainment: [
     'https://variety.com/feed/',
@@ -60,7 +54,6 @@ const RSS_SOURCES = {
   ]
 };
 
-// Free API Sources
 const GN_FREE_API_KEY = process.env.GNEWS_API_KEY || 'YOUR_GNEWS_API_KEY';
 const MARKETAUX_FREE_API_KEY = process.env.MARKETAUX_API_KEY || 'YOUR_MARKETAUX_API_KEY';
 
@@ -151,7 +144,7 @@ async function fetchFromMarketaux(query) {
       url: article.url,
       publishedAt: article.published_at,
       imageUrl: article.image_url || null,
-      category: 'tech'
+      category: 'usStocks'
     }));
   } catch (error) {
     console.warn(`marketaux fetch failed: ${error.message}`);
@@ -164,66 +157,52 @@ async function fetchAllNews() {
   
   const news = {
     philippines: [],
-    energy: [],
-    tech: [],
-    gaming: [],
     world: [],
-    sports: [],
+    energy: [],
+    usStocks: [],
+    tech: [],
     entertainment: [],
     lastUpdated: new Date().toISOString()
   };
   
-  // Fetch Philippines news
   console.log('📍 Fetching Philippines news...');
   const phRSS = await fetchFromRSS('philippines', RSS_SOURCES.philippines);
   const phAPI = await fetchFromGNews('philippines', 'Philippines Manila Makati BGC');
   news.philippines = [...phRSS, ...phAPI].slice(0, 8);
   console.log(`✅ Got ${news.philippines.length} Philippines articles\n`);
   
-  // Fetch Energy & Markets news
-  console.log('⚡ Fetching Energy & Markets news...');
-  const energyRSS = await fetchFromRSS('energy', RSS_SOURCES.energy);
-  const energyAPI = await fetchFromGNews('energy', 'oil gas energy stock market finance');
-  news.energy = [...energyRSS, ...energyAPI].slice(0, 8);
-  console.log(`✅ Got ${news.energy.length} Energy articles\n`);
-  
-  // Fetch Tech news
-  console.log('📈 Fetching Tech Stocks news...');
-  const techRSS = await fetchFromRSS('tech', RSS_SOURCES.tech);
-  const techAPI = await fetchFromGNews('tech', 'AI stocks semiconductor NASDAQ tech');
-  const marketauxNews = await fetchFromMarketaux('AI stocks memory photonics');
-  news.tech = [...techRSS, ...techAPI, ...marketauxNews].slice(0, 8);
-  console.log(`✅ Got ${news.tech.length} Tech articles\n`);
-  
-  // Fetch Gaming news
-  console.log('🎮 Fetching Gaming news...');
-  const gamingRSS = await fetchFromRSS('gaming', RSS_SOURCES.gaming);
-  const gamingAPI = await fetchFromGNews('gaming', 'video games gaming PlayStation Xbox Nintendo');
-  news.gaming = [...gamingRSS, ...gamingAPI].slice(0, 8);
-  console.log(`✅ Got ${news.gaming.length} Gaming articles\n`);
-  
-  // Fetch World news
   console.log('🌍 Fetching World news...');
   const worldRSS = await fetchFromRSS('world', RSS_SOURCES.world);
   const worldAPI = await fetchFromGNews('world', 'world news international Asia Europe');
   news.world = [...worldRSS, ...worldAPI].slice(0, 8);
   console.log(`✅ Got ${news.world.length} World articles\n`);
   
-  // Fetch Sports news
-  console.log('⚽ Fetching Sports news...');
-  const sportsRSS = await fetchFromRSS('sports', RSS_SOURCES.sports);
-  const sportsAPI = await fetchFromGNews('sports', 'NBA football soccer sports');
-  news.sports = [...sportsRSS, ...sportsAPI].slice(0, 8);
-  console.log(`✅ Got ${news.sports.length} Sports articles\n`);
+  console.log('⚡ Fetching Energy & Markets news...');
+  const energyRSS = await fetchFromRSS('energy', RSS_SOURCES.energy);
+  const energyAPI = await fetchFromGNews('energy', 'oil gas energy stock market finance');
+  news.energy = [...energyRSS, ...energyAPI].slice(0, 8);
+  console.log(`✅ Got ${news.energy.length} Energy articles\n`);
   
-  // Fetch Entertainment news
+  console.log('💹 Fetching US Stock Market news...');
+  const stocksRSS = await fetchFromRSS('usStocks', RSS_SOURCES.usStocks);
+  const stocksAPI = await fetchFromGNews('usStocks', 'NASDAQ NYSE stock market US stocks');
+  const stockSpecific = await fetchFromMarketaux('MU SNDK WDC STX Micron SanDisk WesternDigital Seagate stock');
+  const aiStocks = await fetchFromGNews('usStocks', 'AI stocks semiconductor memory photonics NVIDIA AMD Intel');
+  news.usStocks = [...stocksRSS, ...stocksAPI, ...stockSpecific, ...aiStocks].slice(0, 8);
+  console.log(`✅ Got ${news.usStocks.length} US Stock articles\n`);
+  
+  console.log('📈 Fetching Tech & Innovation news...');
+  const techRSS = await fetchFromRSS('tech', RSS_SOURCES.tech);
+  const techAPI = await fetchFromGNews('tech', 'AI technology innovation startups');
+  news.tech = [...techRSS, ...techAPI].slice(0, 8);
+  console.log(`✅ Got ${news.tech.length} Tech articles\n`);
+  
   console.log('🎬 Fetching Entertainment news...');
   const entRSS = await fetchFromRSS('entertainment', RSS_SOURCES.entertainment);
   const entAPI = await fetchFromGNews('entertainment', 'movies TV shows celebrity entertainment');
   news.entertainment = [...entRSS, ...entAPI].slice(0, 8);
   console.log(`✅ Got ${news.entertainment.length} Entertainment articles\n`);
   
-  // Save to file
   const dataPath = path.join(__dirname, '..', 'data', 'news.json');
   await fs.writeFile(dataPath, JSON.stringify(news, null, 2));
   
@@ -235,7 +214,6 @@ async function fetchAllNews() {
   return news;
 }
 
-// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   fetchAllNews().catch(error => {
     console.error('❌ Error fetching news:', error);
