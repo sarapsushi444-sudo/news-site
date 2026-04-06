@@ -25,22 +25,17 @@ const RSS_SOURCES = {
   philippines: [
     'https://www.inquirer.net/fullfeed',
     'https://www.rappler.com/rss/',
-    'https://mb.com.ph/feed/',
   ],
   world: [
     'https://feeds.bbci.co.uk/news/world/rss.xml',
-    'https://rss.cnn.com/rss/edition_world.rss',
-    'https://feeds.reuters.com/reuters/worldnews',
   ],
   energy: [
-    'https://www.marketwatch.com/rss/marketpulse',
     'https://www.investing.com/rss/news.rss',
     'https://feeds.bbci.co.uk/news/business/rss.xml',
   ],
   usStocks: [
     'https://www.cnbc.com/id/100003114/device/rss/rss.html',
     'https://feeds.bbci.co.uk/news/business/rss.xml',
-    'https://www.marketwatch.com/rss/marketpulse',
   ],
   tech: [
     'https://www.cnbc.com/id/19854910/device/rss/rss.html',
@@ -215,10 +210,20 @@ async function fetchAllNews() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  fetchAllNews().catch(error => {
-    console.error('❌ Error fetching news:', error);
+  // Global timeout: 5 minutes (GitHub Actions default timeout is 6 minutes per step)
+  const TIMEOUT_MS = 5 * 60 * 1000;
+  const timeout = setTimeout(() => {
+    console.error('❌ Fetch news timed out after 5 minutes');
     process.exit(1);
-  });
+  }, TIMEOUT_MS);
+
+  fetchAllNews()
+    .then(() => clearTimeout(timeout))
+    .catch(error => {
+      clearTimeout(timeout);
+      console.error('❌ Error fetching news:', error);
+      process.exit(1);
+    });
 }
 
 export { fetchAllNews };
