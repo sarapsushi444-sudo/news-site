@@ -1,6 +1,15 @@
 {
   "philippines": [
     {
+      "title": "PSEi falls below 6,000 as war fears rattle markets",
+      "description": "MANILA, Philippines — Philippine stocks retreated on Monday as the escalating Middle East war dampened investor appetite, pulling the benchmark index below the 6,000 mark. The Philippine Stock Exchange Index (PSEi) declined by 0.84 percent or 50.35 points, to close at 5,948.33. Luis Limlingan, head of sales at stock brokerage house Regina Capital Development Corp., said the market jitters intensified after US President Donald Trump set a deadline for Iran to open the Strait of Hormuz, which added to global uncertainty.  READ: Defiant Iran ramps up attacks after Trump warning “Oil prices remained elevated due to continued supply disruptions tied […]...\nKeep on reading: PSEi falls below 6,000 as war fears rattle markets",
+      "source": "INQUIRER.net",
+      "url": "https://business.inquirer.net/583638/psei-falls-below-6000-as-war-fears-rattle-markets",
+      "publishedAt": "2026-04-06T09:54:14.000Z",
+      "imageUrl": null,
+      "category": "philippines"
+    },
+    {
       "title": "Power grid in Cebu stable following Bogo earthquake — NGCP",
       "description": "LAPU-LAPU CITY, Cebu — Power transmission services in Cebu remained stable after a magnitude 5.1 earthquake struck off Bogo City on Monday afternoon, April 6. “The grid remains intact as there had been no reported cases of power interruptions and damaged transmission facilities in Cebu Province and nearby areas where the earthquake was felt,” the National Grid Corporation of the Philippines (NGCP) said in an advisory. The Philippine Institute of Volcanology and Seismology (Phivolcs) reported that the tremor occurred at around 3:22 p.m., about 12 kilometers southeast of Bogo City. READ: Magnitude 5.4 earthquake rocks City of Bogo, Cebu on […]...\nKeep on reading: Power grid in Cebu stable following Bogo earthquake — NGCP",
       "source": "INQUIRER.net",
@@ -15,15 +24,6 @@
       "source": "INQUIRER.net",
       "url": "https://cebudailynews.inquirer.net/713823/balicasag-island-hides-world-of-wonders-see-for-yourself",
       "publishedAt": "2026-04-06T09:45:00.000Z",
-      "imageUrl": null,
-      "category": "philippines"
-    },
-    {
-      "title": "Capuloy, Bacaro lose in Japan bouts",
-      "description": "CEBU CITY, Philippines — Rhonvex Capuloy and Carlo Bacaro came up short in their respective bouts held at the Korakuen Hall in Tokyo, Japan, on Saturday, April 4. Capuloy, fighting out of the Cebu-based Big Yellow Boxing Gym, absorbed a unanimous decision loss to former world champion Kenichi Ogawa, while Bacaro suffered a ninth-round technical […]...\nKeep on reading: Capuloy, Bacaro lose in Japan bouts",
-      "source": "INQUIRER.net",
-      "url": "https://cebudailynews.inquirer.net/713800/rhonvex-capuloy-carlo-bacaro-lose-in-japan-bouts",
-      "publishedAt": "2026-04-06T09:30:00.000Z",
       "imageUrl": null,
       "category": "philippines"
     },
@@ -344,5 +344,5 @@
       "category": "entertainment"
     }
   ],
-  "lastUpdated": "2026-04-06T09:52:59.535Z"
+  "lastUpdated": "2026-04-06T09:58:03.319Z"
 }
