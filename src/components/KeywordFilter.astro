@@ -207,17 +207,25 @@
     const description = (article.dataset.description || '').toLowerCase();
     const content = title + ' ' + description;
     
-    return keywords.some(keyword => content.includes(keyword));
+    const matches = keywords.some(keyword => content.includes(keyword));
+    if (matches) {
+      console.log('[KeywordFilter] Article matched:', title.substring(0, 50), '...');
+    }
+    
+    return matches;
   }
   
   function applyFilter(): void {
     const keywords = getKeywords();
+    console.log('[KeywordFilter] Applying filter with keywords:', keywords);
     
     // Get all sections
     const sections = document.querySelectorAll('section[data-section]');
+    console.log('[KeywordFilter] Found sections:', sections.length);
     
     sections.forEach(section => {
       const articles = Array.from(section.querySelectorAll('article[data-article]')) as HTMLElement[];
+      console.log('[KeywordFilter] Section articles:', articles.length);
       
       if (keywords.length === 0) {
         // Show all articles
@@ -239,6 +247,8 @@
           nonMatching.push(article);
         }
       });
+      
+      console.log('[KeywordFilter] Matching:', matching.length, 'Non-matching:', nonMatching.length);
       
       // Show top 5 matching, hide others
       const topMatches = matching.slice(0, 5);
