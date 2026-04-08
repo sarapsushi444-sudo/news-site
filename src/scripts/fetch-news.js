@@ -25,27 +25,36 @@ const RSS_SOURCES = {
   philippines: [
     'https://www.inquirer.net/fullfeed',
     'https://www.rappler.com/rss/',
+    'https://www.manilatimes.net/rss',
+    'https://www.philstar.com/rss',
   ],
   world: [
     'https://feeds.bbci.co.uk/news/world/rss.xml',
+    'https://rss.nytimes.com/services/xml/rss/nyt/World.xml',
+    'https://feeds.npr.org/1004/rss.xml',
   ],
   energy: [
     'https://www.investing.com/rss/news.rss',
     'https://feeds.bbci.co.uk/news/business/rss.xml',
+    'https://oilprice.com/rss/main',
   ],
   usStocks: [
     'https://www.cnbc.com/id/100003114/device/rss/rss.html',
     'https://feeds.bbci.co.uk/news/business/rss.xml',
+    'https://feeds.finance.yahoo.com/rss/2.0/headline?s=AAPL,MSFT,GOOGL,AMZA,NVDA&region=US&lang=en-US',
   ],
   tech: [
     'https://www.cnbc.com/id/19854910/device/rss/rss.html',
     'https://feeds.bbci.co.uk/news/technology/rss.xml',
     'https://www.wired.com/feed/rss',
+    'https://www.theverge.com/rss/index.xml',
+    'https://techcrunch.com/feed/',
   ],
   entertainment: [
     'https://variety.com/feed/',
     'https://deadline.com/feed/',
     'https://www.hollywoodreporter.com/feed/',
+    'https://www.rollingstone.com/feed/',
   ]
 };
 

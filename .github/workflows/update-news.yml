@@ -29,9 +29,8 @@ jobs:
       - name: Fetch latest news
         run: npm run fetch-news
         env:
-          # Add your API keys here as GitHub Secrets
-          # GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
-          # MARKETAUX_API_KEY: ${{ secrets.MARKETAUX_API_KEY }}
+          GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
+          MARKETAUX_API_KEY: ${{ secrets.MARKETAUX_API_KEY }}
           NODE_ENV: production
       
       - name: Check for changes
