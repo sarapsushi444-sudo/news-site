@@ -18,7 +18,7 @@ const formattedDate = new Date(publishedAt).toLocaleDateString('en-US', {
 });
 ---
 
-<article class="group bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300">
+<article data-article data-title={title} data-description={description || ''} class="group bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300">
   {imageUrl && (
     <div class="relative h-48 overflow-hidden">
       <img 

@@ -1,0 +1,281 @@
+---
+/**
+ * KeywordFilter Component
+ * Client-side keyword filtering for news articles
+ * Keywords stored in localStorage for persistence
+ */
+---
+
+<div id="keyword-filter-container" class="mb-8">
+  <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Keyword Filter</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Show only articles matching your keywords (top 5 per section)</p>
+        </div>
+      </div>
+      <button
+        id="clear-all-keywords"
+        class="text-xs px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors hidden"
+      >
+        Clear All
+      </button>
+    </div>
+    
+    <!-- Keyword Input -->
+    <div class="flex gap-2 mb-4">
+      <input
+        type="text"
+        id="keyword-input"
+        placeholder="Add keyword (e.g., AI, Philippines, oil)"
+        class="flex-1 px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
+      />
+      <button
+        id="add-keyword-btn"
+        class="px-4 py-2 rounded-lg bg-gradient-to-r from-violet-500 to-purple-600 text-white font-medium hover:from-violet-600 hover:to-purple-700 transition-all shadow-sm hover:shadow-md"
+      >
+        Add
+      </button>
+    </div>
+    
+    <!-- Keywords List -->
+    <div id="keywords-list" class="flex flex-wrap gap-2">
+      <!-- Keywords will be rendered here -->
+    </div>
+    
+    <!-- Filter Status -->
+    <div id="filter-status" class="mt-4 text-sm text-slate-500 dark:text-slate-400 hidden">
+      <span id="active-filter-text"></span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .keyword-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .keyword-chip:hover {
+    transform: scale(1.05);
+  }
+  
+  .keyword-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  
+  .keyword-remove:hover {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = 'news-keywords';
+  
+  // Color palette for keyword chips
+  const COLORS = [
+    'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300',
+    'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300',
+    'bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-300',
+    'bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300',
+    'bg-pink-100 text-pink-800 dark:bg-pink-900/50 dark:text-pink-300',
+    'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/50 dark:text-cyan-300',
+    'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-300',
+    'bg-rose-100 text-rose-800 dark:bg-rose-900/50 dark:text-rose-300',
+  ];
+  
+  function getKeywords(): string[] {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  }
+  
+  function saveKeywords(keywords: string[]): void {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(keywords));
+  }
+  
+  function getColorForKeyword(index: number): string {
+    return COLORS[index % COLORS.length];
+  }
+  
+  function renderKeywords(): void {
+    const keywords = getKeywords();
+    const container = document.getElementById('keywords-list')!;
+    const clearBtn = document.getElementById('clear-all-keywords')!;
+    const filterStatus = document.getElementById('filter-status')!;
+    const activeFilterText = document.getElementById('active-filter-text')!;
+    
+    container.innerHTML = '';
+    
+    if (keywords.length === 0) {
+      clearBtn.classList.add('hidden');
+      filterStatus.classList.add('hidden');
+      return;
+    }
+    
+    clearBtn.classList.remove('hidden');
+    filterStatus.classList.remove('hidden');
+    activeFilterText.textContent = `Filtering by ${keywords.length} keyword${keywords.length > 1 ? 's' : ''}: showing top 5 matches per section`;
+    
+    keywords.forEach((keyword, index) => {
+      const chip = document.createElement('span');
+      chip.className = `keyword-chip ${getColorForKeyword(index)}`;
+      chip.innerHTML = `
+        ${escapeHtml(keyword)}
+        <span class="keyword-remove" data-keyword="${escapeHtml(keyword)}">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </span>
+      `;
+      container.appendChild(chip);
+    });
+    
+    // Add remove handlers
+    container.querySelectorAll('.keyword-remove').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const keyword = (e.currentTarget as HTMLElement).dataset.keyword!;
+        removeKeyword(keyword);
+      });
+    });
+  }
+  
+  function escapeHtml(text: string): string {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+  
+  function addKeyword(keyword: string): void {
+    const trimmed = keyword.trim().toLowerCase();
+    if (!trimmed) return;
+    
+    const keywords = getKeywords();
+    if (keywords.includes(trimmed)) return;
+    
+    keywords.push(trimmed);
+    saveKeywords(keywords);
+    renderKeywords();
+    applyFilter();
+    
+    // Clear input
+    const input = document.getElementById('keyword-input') as HTMLInputElement;
+    input.value = '';
+  }
+  
+  function removeKeyword(keyword: string): void {
+    let keywords = getKeywords();
+    keywords = keywords.filter(k => k !== keyword);
+    saveKeywords(keywords);
+    renderKeywords();
+    applyFilter();
+  }
+  
+  function clearAllKeywords(): void {
+    saveKeywords([]);
+    renderKeywords();
+    applyFilter();
+  }
+  
+  function articleMatchesKeywords(article: HTMLElement, keywords: string[]): boolean {
+    if (keywords.length === 0) return true;
+    
+    const title = (article.dataset.title || '').toLowerCase();
+    const description = (article.dataset.description || '').toLowerCase();
+    const content = title + ' ' + description;
+    
+    return keywords.some(keyword => content.includes(keyword));
+  }
+  
+  function applyFilter(): void {
+    const keywords = getKeywords();
+    
+    // Get all sections
+    const sections = document.querySelectorAll('section[data-section]');
+    
+    sections.forEach(section => {
+      const articles = Array.from(section.querySelectorAll('article[data-article]')) as HTMLElement[];
+      
+      if (keywords.length === 0) {
+        // Show all articles
+        articles.forEach(article => {
+          article.style.display = '';
+          article.classList.remove('opacity-60');
+        });
+        return;
+      }
+      
+      // Filter articles
+      const matching: HTMLElement[] = [];
+      const nonMatching: HTMLElement[] = [];
+      
+      articles.forEach(article => {
+        if (articleMatchesKeywords(article, keywords)) {
+          matching.push(article);
+        } else {
+          nonMatching.push(article);
+        }
+      });
+      
+      // Show top 5 matching, hide others
+      const topMatches = matching.slice(0, 5);
+      const otherMatches = matching.slice(5);
+      
+      topMatches.forEach(article => {
+        article.style.display = '';
+        article.classList.remove('opacity-60');
+      });
+      
+      // Hide non-matching and extra matching
+      [...nonMatching, ...otherMatches].forEach(article => {
+        article.style.display = 'none';
+      });
+    });
+  }
+  
+  // Initialize
+  document.addEventListener('DOMContentLoaded', () => {
+    renderKeywords();
+    applyFilter();
+    
+    // Add keyword button
+    document.getElementById('add-keyword-btn')?.addEventListener('click', () => {
+      const input = document.getElementById('keyword-input') as HTMLInputElement;
+      addKeyword(input.value);
+    });
+    
+    // Enter key on input
+    document.getElementById('keyword-input')?.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        const input = e.target as HTMLInputElement;
+        addKeyword(input.value);
+      }
+    });
+    
+    // Clear all button
+    document.getElementById('clear-all-keywords')?.addEventListener('click', clearAllKeywords);
+  });
+</script>

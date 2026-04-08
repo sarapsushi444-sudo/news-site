@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import NewsCard from '../components/NewsCard.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import KeywordFilter from '../components/KeywordFilter.astro';
 
 // Import news data
 import newsData from '../data/news.json';
@@ -32,8 +33,11 @@ const entertainmentIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-
 ---
 
 <Layout title="Daily News Digest - Philippines, World News, Energy, US Stocks, Tech & Entertainment">
+  <!-- Keyword Filter -->
+  <KeywordFilter />
+  
   <!-- Philippines Section -->
-  <section class="mb-12">
+  <section data-section="philippines" class="mb-12">
     <SectionHeader
       title="🇵🇭 Philippines Pulse"
       subtitle="BGC, Makati & Metro Manila trends, local news and updates"
@@ -61,7 +65,7 @@ const entertainmentIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-
   </section>
 
   <!-- World Section -->
-  <section class="mb-12">
+  <section data-section="world" class="mb-12">
     <SectionHeader
       title="🌍 World News"
       subtitle="Global headlines, international developments and breaking news"
@@ -89,7 +93,7 @@ const entertainmentIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-
   </section>
 
   <!-- Energy & Markets Section -->
-  <section class="mb-12">
+  <section data-section="energy" class="mb-12">
     <SectionHeader
       title="⚡ Energy & Markets"
       subtitle="Oil, gas, energy sector, stock markets and financial developments"
@@ -117,7 +121,7 @@ const entertainmentIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-
   </section>
 
   <!-- US Stock Market Section -->
-  <section class="mb-12">
+  <section data-section="usStocks" class="mb-12">
     <SectionHeader
       title="💹 US Stock Market"
       subtitle="MU, SNDK, WDC, STX, AI stocks, tech stocks and market analysis"
@@ -145,7 +149,7 @@ const entertainmentIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-
   </section>
 
   <!-- Tech Section -->
-  <section class="mb-12">
+  <section data-section="tech" class="mb-12">
     <SectionHeader
       title="📈 Tech & Innovation"
       subtitle="AI, semiconductors, startups, and technology breakthroughs"
@@ -173,7 +177,7 @@ const entertainmentIcon = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-
   </section>
 
   <!-- Entertainment Section -->
-  <section class="mb-12">
+  <section data-section="entertainment" class="mb-12">
     <SectionHeader
       title="🎬 Entertainment"
       subtitle="Movies, TV shows, celebrity news and Hollywood updates"
